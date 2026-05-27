@@ -5,7 +5,7 @@
 
 Setka::Setka()
 {
-	model = LoadModel("setka/dire_board3.glb");
+	model = LoadModel("setka/try2.glb");
 	tSize = SIZE / (float)COUNT; // 26/8 = 3.25
 
 	star1 = LoadTexture("starslvl/star_rank1_psd.png");
@@ -225,7 +225,7 @@ bool Setka::HaveUnitOnPole(int id)
 void Setka::DrawUnits(std::map<int, Animation>& library, Camera3D camera, Shop& shop)
 {
 	//скока кадров анимации
-	static bool logsPrinted = false; // Статическая переменная, чтобы сработало 1 раз
+	static bool logsPrinted = false; // Статическая переменная чтобы сработало один раз
 	if (!logsPrinted) {
 		TraceLog(LOG_INFO, "=== HERO ANIMATION DATA ===");
 		for (auto const& [id, animData] : library) {
@@ -619,7 +619,7 @@ UnitSetka* Setka::FindNearestEnemy(int attackerX, int attackerY, int attackerTea
 			if (potentialEnemy.active && !potentialEnemy.isDead && potentialEnemy.team != attackerTeam)
 			{
 				/*Vector2Distance вычисляет расстояние между двумя точками по формуле пифагора
-				считаем расстояние от атакующешо до потенциальной цели
+				считаем расстояние от атакующего до потенциальной цели
 				используем координаты клеток x y как векторы*/
 				float dist = Vector2Distance({ (float)attackerX, (float)attackerY },
 					{ (float)x, (float)y });

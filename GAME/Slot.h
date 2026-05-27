@@ -61,7 +61,7 @@ public:
 	int GetSellPrice(int index);// продажа персов 
 
 	static const int MAX_BENCH_SLOTS = 8; // колво статов
-	//static  принадлежит классу можно использовать как (пример мой slots[MAX_BENCH_SLOTS])
+	//static  принадлежит классу можно использовать как (пример мой slots[MAX_BENCH_SLOTS]) и static всего один раз инициализируется 
 
 	/* для отрисовки рамки 
 	SetSelectedSlot(int id) устанавливаем какой щас в фокусе(какой я взял) 

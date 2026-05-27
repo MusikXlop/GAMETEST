@@ -6,7 +6,7 @@
 
 
 
-Texture2D Shop::LoadAndTrack(const char* path)
+Texture2D Shop::LoadAndTrack(const char* path)// const char* окончание терминирующим нулем /0
 {
 	Texture2D tex = LoadTexture(path);
 	allTextures.push_back(tex); // сохраняем список для автоматической выгрузки 

@@ -100,7 +100,7 @@ int main()
 
 
 	camera.projection = CAMERA_PERSPECTIVE;
-	Model altar = LoadModel("setka/altarfinall233.glb"); // задний фон 
+	Model altar = LoadModel("setka/fULLSKY.glb"); // задний фон 
 	Texture2D FullHp = LoadTexture("hp/icon_health_lg_psd.png");
 	Texture2D HalfHp = LoadTexture("hp/icon_health_mid_lg_psd.png");
 	Texture2D LowHp = LoadTexture("hp/icon_health_low_lg_psd.png");
@@ -232,7 +232,7 @@ int main()
 
 
 
-				static bool gornPlayed = false;
+				static bool gornPlayed = false;//static всего  один раз вызывается 
 				//вызов горна за 8 сек до старта 
 				if (phaseTimer <= 8.0f)
 				{
