@@ -37,14 +37,16 @@ void StartBattle(Setka& arena, std::map<int, Animation>& library, ItemManager& i
 					items.ApplyItemBuffs(&unit, unit.unitItems[0]);
 				}
 
-				//сонхронизируем базу 
+				//сонхронизируем базу (база  + урон от шмоток)
 				unit.baseDamage = (int)unit.stats.damage - unit.baseDamage;
 				unit.baseArmor = (int)unit.stats.armor - unit.baseArmor;
+				//фикс бага чтоб у меня статы не налаживались друг на друга в некст раунде х2 х3 урон 
+
 
 
 				//присваиваем модель из библиотеки по айди 
 				int id = arena.PoleHero[x][y].unitID;
-				if (library.find(id) != library.end())
+				if (library.find(id) != library.end()) //гарант что ключ  ключ есть
 				{
 					arena.PoleHero[x][y].modelka = library[id].model;
 				}

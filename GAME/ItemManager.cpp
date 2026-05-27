@@ -291,7 +291,7 @@ void ItemManager::DrawInventory(Vector2 startPos) //интерфейс
 		//если тащим шмот то рисуем иконку прям под курсором 
 		if (isDraggingFromUnit)
 		{
-			// если тянем  из героя шмот куда-то то рисуем  tempItem
+			// если тянем  из героя шмот куда-то то рисуем  tempItem ( -35 половина размера)       
 			DrawTextureEx(tempItem.icon, { mousePose.x - 35, mousePose.y - 35 }, 0.0f, 0.27f, WHITE);
 		}
 		else if (draggedItemIndex != -1)

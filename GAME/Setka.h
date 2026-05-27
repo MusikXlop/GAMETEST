@@ -96,7 +96,7 @@ public:
 
 
 	template<typename T>
-	void InitializeHeroStats(T& unit) // // Теперь T может быть и UnitSetka, и BenchSlot
+	void InitializeHeroStats(T& unit)//Теперь T может быть и UnitSetka и BenchSlot
 	{
 		//обнуление бонусов(иначе оно будет плюсоваться бесконечно)
 		unit.bonusDamage = 0;

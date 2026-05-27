@@ -500,7 +500,7 @@ void Setka::SpawnSummons(int id, Vector2 tile, int team, int level, std::map<int
 	int x = (int)tile.x; 
 	int y = (int)tile.y;
 
-	if (x < 0 || x >= COUNT || y < 0 || y >= COUNT) return;
+	if (x < 0 || x >= COUNT || y < 0 || y >= COUNT) return; //защищает от выхода за массив
 
 	//получаем ссылку на объект в сетке тепеорь summon это клетка (где будут спавнится скелеты)
 	UnitSetka& summon = PoleHero[x][y];
